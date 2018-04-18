@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+	
+<script type="text/javascript">
+	
+	/************** Just to Understand Prototype ***************/
+	function Person(name, age, place){
+		this.name = name;
+		this.age = age;
+		this.place = place;
+	}
+
+	//This will add property to all objects, as all objects inherits "Object"
+	Object.prototype.nationality = 'India';
+
+	var person = new Person('Sujit',28,'Belgaum');
+	
+
+	console.log(person.nationality);
+	console.log(document.nationality);
+	console.log(window.nationality);
+	
+	console.log(Object.prototype.hasOwnProperty('nationality'));
+
+</script>
+
+</html>

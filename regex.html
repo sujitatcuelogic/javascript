@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+		
+		var str1 = "This is cuelogic, and we are in 2018";
+		var str2 = "World is the best place";
+		var email = 'sujit.birje@gmail.com';
+
+		//search string for a number
+		var reg1 = /[0-9]/g;
+		//var reg2 = /[@#&]+/g;
+		var is_present = reg1.test(str1);
+		console.log(is_present);
+
+		is_present = str1.match(reg1);
+		console.log(is_present);
+
+		is_present = reg1.exec(str1);
+		console.log(is_present);
+
+
+		/*************************** Validate Email ***************************/
+		var reg_email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
+		var is_email = reg_email.test(email);
+		console.log(email+" Is Email : "+is_email); 
+		email = 'sujit.birje@gmail.co';
+		is_email = reg_email.test(email);
+		console.log(email+" Is Email : "+is_email); 
+
+		/*************************** Validation for Mobile ********************/
+		var reg_mobile = /^\d{10}/;
+		var mobile1 = '9591194401';
+		var mobile2 = '+91 9591194401';
+		var mobile3 = '+ 9591194401';
+		var is_mobile = reg_mobile.test(mobile1);
+		console.log(mobile1+" Is Mobile : "+is_mobile); 
+		is_mobile = reg_mobile.test(mobile2);
+		console.log(mobile2+" Is Mobile : "+is_mobile); 
+		is_mobile = reg_mobile.test(mobile3);
+		console.log(mobile3+" Is Mobile : "+is_mobile); 
+
+
+
+	</script>
+
+</body>
+</html>

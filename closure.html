@@ -1,0 +1,43 @@
+https://www.w3schools.com/js/js_function_closures.asp
+
+<script type="text/javascript">
+	var globalVariable = 10;
+	function printVariable(){
+		var localVariable = 20;
+		console.log("globalVariable : "+globalVariable);
+		console.log("localVariable : "+localVariable);
+		funGlobalVariable = 30;
+		console.log("funGlobalVariable : "+funGlobalVariable);
+		globalVariable = 22;
+	}
+
+	printVariable();
+
+	try{
+		console.log("globalVariable : "+globalVariable);
+		console.log("funGlobalVariable : "+funGlobalVariable);
+		console.log("localVariable : "+localVariable);
+	} catch (e){
+
+	}
+
+
+
+	/****************** EXAMPLE OF CLOSURE *****************/
+	var add = (function () {
+    	var counter = 0;
+    	return function () {return counter += 1;}
+	})();
+
+	add();
+	add();
+	var final_count = add();
+	console.log(final_count);
+	// the counter is now 3
+
+
+	var numbers = [4,16, 64];
+	var arr = numbers.map(Math.sqrt);
+	console.log(arr);
+
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <script type="text/javascript">
+      </script>
+	<title></title>
+</head>
+<body>
+
+
+      <form>
+         <input type="button" value="Click Me" onclick="myFunc();" />
+      </form>
+
+
+<script type="text/javascript">
+
+	var a = 100;
+	var c = 0;
+	try{
+		c = a / 0;
+        throw( "Divide by zero error." ); 
+		console.log("Value of C : "+c);
+	} catch (e){
+		console.log("Error occured : "+e);
+
+	} finally{
+		console.log("finally Block ");
+	}
+
+
+	
+ 	window.onerror = function (msg) {
+       alert("Error : "+msg);
+    }
+
+
+</script>
+</body>
+</html>
