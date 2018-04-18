@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+	<p>Reference From : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is</p>
+	<div id="call1" ></div>
+	<div id="call2" ></div>
+
+</body>
+
+	<script type="text/javascript">
+		
+		var myObject = {
+			firstname : 'Sujit',
+			lastname : 'Birje',
+			fullName : function(){
+				return this.firstname + ' ' + this.lastname;
+			}
+		};
+
+		var otherObject = {
+			'firstname' : 'Ajit',
+			'lastname' : 'Birje',
+		};
+
+		//This is called with the default object
+		document.getElementById('call1').innerHTML = myObject.fullName();
+
+		//This will be called with the other object, which is passed as paramether to call method also called as invoking
+		document.getElementById('call2').innerHTML = myObject.fullName.call(otherObject);
+
+	</script>
+</html>

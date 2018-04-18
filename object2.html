@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<body>
+	<p>Reference From : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign</p>
+
+</body>
+
+	<script type="text/javascript">
+
+		//FOR Object.assign();
+		const object1 = {
+		  a: 1,
+		  b: 2,
+		  c: 3,
+		  sum : function(){
+		  	return this.a + this.b + this.c;
+ 		  }
+		};
+
+		const object2 = Object.assign({d:2}, object1);
+
+		console.log(object2.c, object2.d);
+		// expected output: 3 5
+
+		/************** Object create **************/
+		const Object1 = {
+			name : 'Sujit',
+			company : 'CueLogic', 
+		}
+
+		const newObj = Object.create(Object1);
+		console.log(newObj.name);
+		
+		//Try change property value of main object
+		Object1.name='Ajit';
+		console.log(Object1.name);
+
+		//It will change value for newlly created object
+		console.log(newObj.name);
+
+
+		/************** Object Entries *************/
+		console.log(Object.entries(object1));
+
+		/************* Object GetOwnPropertyName *************/
+		console.log(Object.getOwnPropertyNames(object1));
+
+		/************* Object.is() Method ***************/
+		console.log(Object.is('ss', 'ss'));
+
+
+		/************* Object Keys *************/
+		console.log(Object.keys(object1));
+
+
+		/************* Object Values *************/
+		console.log(Object.values(object1));
+
+
+	</script>
+</html>
